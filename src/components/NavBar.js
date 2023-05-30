@@ -69,13 +69,13 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href={''}>
+              <a href="https://google.com">
                 <img src={NavIcon1} alt="" />
               </a>
-              <a href={''}>
+              <a href="https://google.com">
                 <img src={NavIcon2} alt="" />
               </a>
-              <a href={''}>
+              <a href="https://google.com">
                 <img src={NavIcon3} alt="" />
               </a>
               <button className="vvd" onClick={() => console.log('connect')}>

@@ -1,9 +1,11 @@
 import { Col, Container, Nav, Row, Tab } from 'react-bootstrap'
 import { ProjectCard } from './ProjectCard'
+import TrackVisibility from 'react-on-screen'
 import colorsharp2 from '../assets/img/color-sharp2.png'
 import projImg1 from '../assets/img/project-img1.png'
 import projImg2 from '../assets/img/project-img2.png'
 import projImg3 from '../assets/img/project-img3.png'
+import 'animate.css'
 
 export const Projects = () => {
   const projects = [
@@ -43,14 +45,24 @@ export const Projects = () => {
       <Container>
         <Row>
           <Col>
-            <h2>Projects</h2>
-            <p>
-              All the Lorem Ipsum generators on the Internet tend to repeat
-              predefined chunks as necessary, making this the first true
-              generator on the Internet. It uses a dictionary of over 200 Latin
-              words, combined with a handful of model sentence structures, to
-              generate Lorem Ipsum which looks reasonable.
-            </p>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? 'animate__animated animate__slideInUp' : ''
+                  }
+                >
+                  <h2>Projects</h2>
+                  <p>
+                    All the Lorem Ipsum generators on the Internet tend to
+                    repeat predefined chunks as necessary, making this the first
+                    true generator on the Internet. It uses a dictionary of over
+                    200 Latin words, combined with a handful of model sentence
+                    structures, to generate Lorem Ipsum which looks reasonable.
+                  </p>
+                </div>
+              )}
+            </TrackVisibility>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav
                 variant="pills"
